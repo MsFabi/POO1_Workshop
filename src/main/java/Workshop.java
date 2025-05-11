@@ -20,6 +20,7 @@ public class Workshop {
     public int mayorDeTresNumeros(int a, int b, int c) {
         // TODO: Implementar el método para retornar el mayor de los tres números enteros.
         // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
+        //probando la forma de subir esto
         if (a > b && a > c) {
             return a;
         } else if (b > a && b > c) {
