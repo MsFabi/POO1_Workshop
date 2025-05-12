@@ -507,9 +507,9 @@ public class Workshop {
                 (player1.equals("R") && (player2.equals("L") || player2.equals("S"))) ||
                 (player1.equals("L") && (player2.equals("V") || player2.equals("P"))) ||
                 (player1.equals("V") && (player2.equals("S") || player2.equals("R")))) {
-            return "Player1";
+            return "Player 1";
         } else {
-            return "Player2";
+            return "Player 2";
         }
     }
 
