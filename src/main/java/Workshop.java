@@ -489,4 +489,28 @@ public class Workshop {
         }
     }
 
+    public String pptls2 (String game[]) {
+
+        if (game.length != 2) {
+            return "Empate";
+        }
+
+        String player1 = game[0];
+        String player2 = game[1];
+
+        if (player1.equals(player2)) {
+            return "Empate";
+        }
+
+        if ((player1.equals("S") && (player2.equals("P") || player2.equals("L"))) ||
+                (player1.equals("P") && (player2.equals("R") || player2.equals("V"))) ||
+                (player1.equals("R") && (player2.equals("L") || player2.equals("S"))) ||
+                (player1.equals("L") && (player2.equals("V") || player2.equals("P"))) ||
+                (player1.equals("V") && (player2.equals("S") || player2.equals("R")))) {
+            return "Player1";
+        } else {
+            return "Player2";
+        }
+    }
+
 }
