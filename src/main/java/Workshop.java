@@ -327,6 +327,9 @@ public class Workshop {
     public double promedioLista(List<Integer> lista) {
         // TODO: Implementar el método para calcular el promedio de una lista de números.
         // Ejemplo: Si lista = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
+        if (lista == null || lista.isEmpty()) {
+            return 0.0;
+        }
         double index = 0;
         double suma = 0;
         for (int numero : lista) {
