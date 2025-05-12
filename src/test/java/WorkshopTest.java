@@ -367,4 +367,15 @@ public class WorkshopTest {
         assertFalse(tester.validarCorreoElectronico("test$%^&*()@example.com"));
     }
 
+    @Test
+    public void testPPTLS2()
+    {
+        assertEquals("Player 2", tester.pptls2(new String []{"P","S"}));
+        assertEquals("Empate", tester.pptls2(new String []{"S","S"}));
+        assertEquals("Player 1", tester.pptls2(new String []{"V","S"}));
+        assertEquals("Player 2", tester.pptls2(new String []{"R","V"}));
+        assertEquals("Empate", tester.pptls2(new String []{"P","P"}));
+        assertEquals("Player 1", tester.pptls2(new String []{"L","P"}));
+    }
+
 }
