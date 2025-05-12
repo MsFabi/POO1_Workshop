@@ -263,7 +263,9 @@ public class Workshop {
         for (int i = cadena.length() - 1; i >= 0; i--) {
             inversion = inversion + (cadena.charAt(i));
         }
-        return cadena.equalsIgnoreCase(inversion);
+        String sinInversion = inversion.replace(" ", "").toLowerCase();
+        String sinCadena = cadena.replace(" ", "").toLowerCase();
+        return sinCadena.equalsIgnoreCase(sinInversion);
     }
 
     // Método que cuenta el número de palabras en una cadena
