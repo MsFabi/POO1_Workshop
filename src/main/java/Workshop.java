@@ -165,9 +165,15 @@ public class Workshop {
     public int[] ordenarArreglo(int[] arreglo) {
         // TODO: Implementar el método para ordenar un arreglo en orden ascendente.
         // Ejemplo: Si arreglo = [5, 4, 3, 2, 1], el resultado debería ser [1, 2, 3, 4, 5].
-        int[] ascendente = new int[arreglo.length];
-        for (int i = 0; i < arreglo.length; i++) {
-            ascendente[i] = arreglo[arreglo.length - 1 - i];
+        int[] ascendente = arreglo.clone();
+        for (int i = 0; i < ascendente.length - 1; i++) {
+            for (int j = 0; j < ascendente.length - i - 1; j++) {
+                if (ascendente[j] > ascendente[j + 1]) {
+                    int temp = ascendente[j];
+                    ascendente[j] = ascendente[j + 1];
+                    ascendente[j + 1] = temp;
+                }
+            }
         }
         return ascendente;
     }
