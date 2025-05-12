@@ -213,10 +213,10 @@ public class Workshop {
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y posiciones = 2, el resultado debería ser [3, 4, 5, 1, 2].
         int[] rotacion = new int[arreglo.length];
         for (int i = 0; i < arreglo.length; i++) {
-            if (i + posiciones > arreglo.length - 1) {
-                rotacion[i] = (i + posiciones) - (arreglo.length - 1);
+            if (i + arreglo.length - 2 < arreglo.length) {
+                rotacion[i] = (i + arreglo.length - 1);
             } else {
-                rotacion[i] = arreglo[i + posiciones];
+                rotacion[i] = arreglo[i - posiciones];
             }
         }
         return rotacion;
