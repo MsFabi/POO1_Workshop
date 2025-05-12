@@ -278,6 +278,9 @@ public class Workshop {
     public int contarPalabras(String cadena) {
         // TODO: Implementar el método para contar el número de palabras en una cadena.
         // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
+        if (cadena == null || cadena.trim().isEmpty()) {
+            return 0;
+        }
         String[] palabras = cadena.split("\\s+");
         return palabras.length;
     }
