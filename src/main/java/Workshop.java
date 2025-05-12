@@ -435,14 +435,14 @@ public class Workshop {
             return "Tauro";
         }
         else if (month == 5 && day >= 21 && day <= 31) {
-            return "Géminis";
+            return "Gemini";
         } else if (month == 6 && day >= 1 && day <= 20) {
-            return "Géminis";
+            return "Gemini";
         }
         else if (month == 6 && day >= 21 && day <= 30) {
-            return "Cáncer";
+            return "Cancer";
         } else if (month == 7 && day >= 1 && day <= 22) {
-            return "Cáncer";
+            return "Cancer";
         }
         else if (month == 7 && day >= 23 && day <= 31) {
             return "Leo";
