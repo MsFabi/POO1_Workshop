@@ -306,7 +306,13 @@ public class Workshop {
     public boolean validarCorreoElectronico(String correo) {
         // TODO: Implementar el método para validar un correo electrónico.
         // Ejemplo: Si correo = "test@example.com", el resultado debería ser true.
-        return false;
+        if (correo == null) {
+            return false;
+        }
+
+        // Regex más completa según RFC 5322
+        String regex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        return correo.matches(regex);
     }
 
     // Método que calcula el promedio de una lista de números
@@ -332,7 +338,7 @@ public class Workshop {
         } else {
             // Para negativos, quitamos el signo y agregamos "-" al inicio
             return "-" + Integer.toHexString(-numero).toUpperCase();
-        }   
+        }
     }
 
     // Método para el juego de piedra, papel, tijera, lagarto, Spock
@@ -361,7 +367,6 @@ public class Workshop {
             return "Empate. Ambos eligieron " + eleccionUsuario;
         }
 
-        // Reglas del juego
         boolean usuarioGana = false;
 
         switch (eleccionUsuario) {
