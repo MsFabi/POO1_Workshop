@@ -485,7 +485,7 @@ public class Workshop {
             return "Piscis";
         }
         else {
-            return "Fecha inválida";
+            return "Invalid Date";
         }
     }
 
